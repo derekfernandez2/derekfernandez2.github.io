@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+.hero {
+  background: #111;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  background: #222;
+}
+.nav li {
+  margin: 0 1rem;
+}
+.nav a {
+  color: #f44;
+  text-decoration: none;
+}

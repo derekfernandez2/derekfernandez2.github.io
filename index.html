@@ -1,17 +1,117 @@
+<!-- Home Page for Miata Restoration Website -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-    </main>
-    <script src="index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Miata - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    .hero {
+      background-image: url('assets/starscape.png');
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-align: center;
+      padding: 100px 20px 50px;
+    }
+    .miata-img {
+      width: 200px;
+      animation: pulse 2s infinite ease-in-out;
+    }
+    .blink {
+      opacity: 0.4;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+      background: #111;
+    }
+    nav a {
+      color: #f00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #f44;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="assets/miata_blink.png" alt="Blinking Miata" class="miata-img">
+    <p> Source: https://www.motortrend.com/how-to/impp-1110-miata-articles-build-log</p>
+    <h1>Project Miata Restoration</h1>
+    <p>Follow my journey restoring a 1990 Mazda MX-5 Miata and learn how you can do it too.</p>
+  </header>
+
+  
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="getting-started.html">Getting Started</a></li>
+      <li><a href="restoration.html">Restoration</a></li>
+      <li><a href="cost-breakdown.html">Cost Breakdown</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+
+  <main class="content">
+    <section class="overview">
+      <h2>About This Site</h2>
+      <p>This website is a guide and a story, both for car lovers and anyone curious about getting into project cars. It's centered around restoring a 1990 Mazda MX-5 Miata, and it breaks down every step, every part, and every mistake I made along the way. No fluff, just experience.</p>
+      <p>The goal is simple: help people get started. Whether you’re intimidated by the tools, the cost, or the process, this site is here to show you that it’s totally doable. It's written from the perspective of someone who had no clue what they were doing and figured it out anyway. I’ll walk you through tools, budgeting, repairs, and common issues so you can learn from my wins and screwups.</p>
+    </section>
+
+    <section class="pages-preview">
+      <h2>What You’ll Find Here</h2>
+      <ul>
+        <li><strong>Getting Started:</strong> Tools you need, how to plan, and where to begin.</li>
+        <li><strong>Restoration Process:</strong> Detailed breakdowns of repairs, from the engine bay to the interior.</li>
+        <li><strong>Cost Breakdown:</strong> Honest pricing, including the stuff you didn’t see coming.</li>
+        <li><strong>Gallery & Experiences:</strong> Photos of the car before, during, and after, plus personal stories and moments from the project.</li>
+      </ul>
+    </section>
+
+    <section class="purpose">
+      <h2>Why This Site Exists</h2>
+      <p>Most first-time project car owners don’t know where to start. It’s scary, expensive, and a little overwhelming. This site tackles that. It helps you take your first step, learn the basics, and avoid common pitfalls. I want to make restoring your dream car less intimidating and way more fun.</p>
+    </section>
+
+    <section class="content-types">
+      <h2>What’s Included</h2>
+      <ul>
+        <li>Guides on procedures done</li>
+        <li>Parts and maintenance lists</li>
+        <li>Photos</li>
+        <li>Learnt lessons</li>
+      </ul>
+    </section>
+
+    <section class="related-sites">
+      <h2>Similar Builds & Inspirations</h2>
+      <ul>
+        <li><a href="https://www.topmiata.com/miata-kb/mazda-miata-mx5-na-restoring-bringing-back-the-glory/" target="_blank">TopMiata: NA Restoration</a></li>
+        <li><a href="https://www.motorbiscuit.com/restore-your-first-generation-mazda-mx-5-miata-for-40000/" target="_blank">MotorBiscuit Miata Guide</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>

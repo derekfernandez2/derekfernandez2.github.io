@@ -1,0 +1,94 @@
+<!-- Cost Breakdown Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cost Breakdown - Project Miata</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    table { width: 100%; border-collapse: collapse; background: #111; color: #fff; margin-top: 1rem; }
+    th, td { border: 1px solid #444; padding: 0.75rem; text-align: left; }
+    th { background-color: #222; }
+    tfoot td { font-weight: bold; color: #f44; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Cost Breakdown</h1>
+    <p>Every dollar counts. Here's where the money went in the Miata restoration process.</p>
+  </header>
+
+  
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="getting-started.html">Getting Started</a></li>
+      <li><a href="restoration.html">Restoration</a></li>
+      <li><a href="cost-breakdown.html">Cost Breakdown</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+
+  <main class="content">
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+      <tbody id="cost-table-body"></tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td id="total-cost"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </main>
+
+  <script>
+    const parts = [
+      ["NGK Spark Plugs", 40],
+      ["AFM Sensor", 150],
+      ["Valve Cover Gasket", 75],
+      ["Fuel Injector Cleaner", 10],
+      ["Lucas Injector Cleaner", 10],
+      ["Ignition Coil Pack", 60],
+      ["OZ Wheels & Hancook Tires", 900],
+      ["Nardi Torino Steering Wheel", 50],
+      ["DA Polisher", 65],
+      ["Detail Pads (cutting/compound/polish/finish)", 40],
+      ["Meguiar's Ultimate Compound", 20],
+      ["Meguiar's Finishing Polish", 40],
+      ["Scratch Repair 2.0", 15],
+      ["Black Plastic Restorer", 15],
+      ["PowerStop Z23 Brake Kit", 250],
+      ["Rotella T6 Oil (6qt)", 40],
+      ["Mobil 1 Transmission Fluid", 30],
+      ["Coolant (non-diluted)", 15],
+      ["AC Control Panel", 20],
+      ["Interior Tombstone Trim", 30],
+      ["LED Interior Lights", 10],
+      ["Halo LED Headlights", 65],
+      ["Spray Wax", 25],
+      ["Foaming Car Soap", 10],
+      ["Windex", 5],
+      ["Leather & Vinyl Restorer", 10]
+    ];
+
+    let total = 0;
+    const tbody = document.getElementById("cost-table-body");
+    parts.forEach(([item, cost]) => {
+      total += cost;
+      const row = document.createElement("tr");
+      row.innerHTML = `<td>${item}</td><td>$${cost.toFixed(2)}</td>`;
+      tbody.appendChild(row);
+    });
+
+    document.getElementById("total-cost").textContent = `$${total.toFixed(2)}`;
+  </script>
+</body>
+</html>

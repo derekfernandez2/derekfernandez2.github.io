@@ -1,0 +1,98 @@
+<!-- Getting Started Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started - Project Miata</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Getting Started</h1>
+    <p>Your guide to the first steps of restoring a 1990 Mazda MX-5 Miata.</p>
+  </header>
+
+  
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="getting-started.html">Getting Started</a></li>
+      <li><a href="restoration.html">Restoration</a></li>
+      <li><a href="cost-breakdown.html">Cost Breakdown</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+
+  <main class="content">
+    <section>
+      <h2>Essential Tools you will need for the job</h2>
+      <ul>
+        <li>Socket Wrench Kit</li>
+        <li>Jack and Jack Stands</li>
+        <li>Torque Wrench</li>
+        <li>Breaker Bar</li>
+        <li>OBD1 Code Reader</li>
+        <li>Multimeter</li>
+        <li>Shop Towels & Degreaser</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Starter Parts List & Costs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Part</th>
+            <th>Estimated Cost</th>
+          </tr>
+        </thead>
+        <tbody id="parts-list"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const parts = [
+      { name: "NGK Spark Plugs", price: "$40" },
+      { name: "Fuel Injector Cleaner", price: "$10" },
+      { name: "Ignition Coil Pack", price: "$60" },
+      { name: "DA Polisher", price: "$65" },
+      { name: "Cutting, Compounding, Polishing & Finishing Pads", price: "$40" },
+      { name: "Meguiar's Ultimate Compound", price: "$20" },
+      { name: "Meguiar's Ultimate Finishing Polish", price: "$40" },
+      { name: "Meguiar's Scratch Repair 2.0", price: "$15" },
+      { name: "Meguiar's Ultimate Black Plastic Restorer 2.0", price: "$15" },
+      { name: "Rotella T6 5W40 (6 gal)", price: "$40" },
+      { name: "Mobil 1 Transmission Fluid (5 qt)", price: "$30" },
+      { name: "Antifreeze Coolant (1 gal, non-diluted)", price: "$15" },
+      { name: "Interior LED Light Set", price: "$10" },
+      { name: "Pittsburg 200 toolset", price: "$38" },
+      { name: "Jack Stands", price: "$15" },
+      { name: "20 Pack micro fiber towels", price: "$15" },
+      { name: "OBD1 Code reader", price: "$25" },
+      { name: "Multimeter", price: "$35" },
+
+    ];
+
+    const tbody = document.getElementById("parts-list");
+    let total = 0;
+
+    parts.forEach(part => {
+      const row = document.createElement("tr");
+      row.innerHTML = `<td>${part.name}</td><td>${part.price}</td>`;
+      tbody.appendChild(row);
+
+      const numericPrice = parseFloat(part.price.replace("$", ""));
+      total += numericPrice;
+    });
+
+    const totalRow = document.createElement("tr");
+    totalRow.innerHTML = `<td style="font-weight:bold;">Total</td><td style="font-weight:bold;">$${total.toFixed(2)}</td>`;
+    tbody.appendChild(totalRow);
+  });
+</script>
+</body>
+</html>
